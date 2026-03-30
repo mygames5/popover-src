@@ -1,0 +1,244 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 50px;
+  color: #212529;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  align-items: center;
+}
+
+/* стили красной кнопки */
+.popover-wrapper {
+  position: relative;
+  margin-top: 100px;
+}
+
+.btn-red {
+  color: #fff;
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+
+/* само всплывающее окно */
+.popover-box {
+  position: absolute;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  width: 276px;
+  box-shadow: 0 .25rem .5rem rgba(0,0,0,.2);
+  z-index: 1060;
+  text-align: left;
+}
+
+.popover-header {
+  padding: .5rem .75rem;
+  margin: 0;
+  font-size: 1rem;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+}
+
+.popover-body {
+  padding: .5rem .75rem;
+  color: #212529;
+}
+
+/* стрелочка всплывающего окна */
+.popover-arrow {
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-width: 11px 11px 0;
+  border-style: solid;
+  border-color: rgba(0,0,0,.2) transparent transparent transparent;
+}
+
+.popover-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: -10px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* окно программы */
+.window {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 500px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.mac-header {
+  background: #e6e6e6;
+  padding: 8px 12px;
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid #ccc;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+/* сетка на фоне */
+.window-body {
+  background-color: #fff;
+  background-image: 
+    linear-gradient(#f0f0f0 1px, transparent 1px), 
+    linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.crm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
+
+.crm-title {
+  font-size: 18px;
+  color: #555;
+}
+
+.btn-add {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #777;
+}
+
+/* таблица внутри белого блока */
+.table-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-weight: normal;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+/* модалки */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal-window {
+  width: 350px;
+}
+
+.form-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.error-msg {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-form {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #333;
+}

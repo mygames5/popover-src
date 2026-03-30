@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>дз</title>
+</head>
+<body>
+  <div class="container">
+    <div class="popover-wrapper">
+      <button id="popover-btn" class="btn-red">Click to toggle popover</button>
+    </div>
+
+    <div class="crm-wrapper">
+      <div class="window">
+        <div class="mac-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="window-body">
+          <div class="crm-header">
+            <div class="crm-title">Товары</div>
+            <button id="add-btn" class="btn-add">+</button>
+          </div>
+          <div class="table-box">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Название</th>
+                  <th>Стоимость</th>
+                  <th>Действия</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="form-modal" class="modal hidden">
+    <div class="window modal-window">
+      <div class="mac-header">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="window-body">
+        <div class="form-box">
+          <div class="form-group">
+            <label>Название</label>
+            <input type="text" id="input-name">
+            <div class="error-msg" id="error-name"></div>
+          </div>
+          <div class="form-group">
+            <label>Стоимость</label>
+            <input type="number" id="input-price">
+            <div class="error-msg" id="error-price"></div>
+          </div>
+          <div class="form-actions">
+            <button id="save-btn" class="btn-form">Сохранить</button>
+            <button id="cancel-btn" class="btn-form">Отмена</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="delete-modal" class="modal hidden">
+    <div class="window modal-window">
+      <div class="window-body">
+        <div style="text-align: center; margin-bottom: 20px;">удалить этот товар</div>
+        <div class="form-actions" style="justify-content: center;">
+          <button id="confirm-delete" class="btn-form">да</button>
+          <button id="cancel-delete" class="btn-form">нет</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
